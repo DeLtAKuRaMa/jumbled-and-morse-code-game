@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Game</title>
+    <style>
+        /* Global styling */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        /* Center content */
+        .container {
+            text-align: center;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 48px;
+            color: #00FF00; /* Neon green */
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Button styling */
+        .game-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 22px;
+            text-transform: uppercase;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button hover effects */
+        .game-btn:hover {
+            transform: translateY(-10px);
+            background-color: #ff4500;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button specific styling */
+        .btn-jumbled {
+            background-color: #1E90FF; /* Blue */
+        }
+
+        .btn-jumbled:hover {
+            background-color: #1C86EE;
+        }
+
+        .btn-morse {
+            background-color: #32CD32; /* Lime Green */
+        }
+
+        .btn-morse:hover {
+            background-color: #2EB82E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Game</h1>
+        <div class="button-container">
+            <a href="{{ url_for('jumbled_game') }}" class="game-btn btn-jumbled">Jumbled Words</a>
+            <a href="{{ url_for('morse_game') }}" class="game-btn btn-morse">Morse Code</a>
+        </div>
+    </div>
+</body>
+</html>

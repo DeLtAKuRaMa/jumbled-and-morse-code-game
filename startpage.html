@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Game Hub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #00FF00; /* Neon green */
+        }
+
+        .start-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 24px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .start-btn:hover {
+            background-color: #ff4500;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the Game Hub</h1>
+        <a href="{{ url_for('game_select') }}">
+            <button class="start-btn">Start Game</button>
+        </a>
+    </div>
+</body>
+</html>
